@@ -8,3 +8,8 @@ https://vuetifyjs.com/pt-BR/getting-started/quick-start
 "compilerOptions": {
     "types": ["vuetify"],
  
+
+ OBSERVACOES: Esse plugin se mostrou instável nos testes, mostrando não compatível com TS sem a alteração acima e não compatível com TSLint, pode não ser compatível com outras configurações também.
+
+ Recomendo usar o semantic-ui.
+ 
