@@ -7,9 +7,13 @@ Documentação : https://stenciljs.com/
 
 Já vem com typescript, HMR
 
-OBSERVACAO: Ao comitar, igniorar diretórios:
+OBSERVACOES: 
+
+1-) Ao comitar, igniorar diretórios:
 ./node_modules
 ./.stencil
 ./www
 ./dist
+
+2-) A pasta ./www é a distribuição
 
