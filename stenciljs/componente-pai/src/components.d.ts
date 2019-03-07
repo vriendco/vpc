@@ -12,6 +12,35 @@ import '@stencil/core';
 
 export namespace Components {
 
+  interface MyComponentChild {
+    /**
+    * The first name
+    */
+    'first': string;
+    /**
+    * The last name
+    */
+    'last': string;
+    /**
+    * The middle name
+    */
+    'middle': string;
+  }
+  interface MyComponentChildAttributes extends StencilHTMLAttributes {
+    /**
+    * The first name
+    */
+    'first'?: string;
+    /**
+    * The last name
+    */
+    'last'?: string;
+    /**
+    * The middle name
+    */
+    'middle'?: string;
+  }
+
   interface MyComponent {
     /**
     * The first name
@@ -44,13 +73,21 @@ export namespace Components {
 
 declare global {
   interface StencilElementInterfaces {
+    'MyComponentChild': Components.MyComponentChild;
     'MyComponent': Components.MyComponent;
   }
 
   interface StencilIntrinsicElements {
+    'my-component-child': Components.MyComponentChildAttributes;
     'my-component': Components.MyComponentAttributes;
   }
 
+
+  interface HTMLMyComponentChildElement extends Components.MyComponentChild, HTMLStencilElement {}
+  var HTMLMyComponentChildElement: {
+    prototype: HTMLMyComponentChildElement;
+    new (): HTMLMyComponentChildElement;
+  };
 
   interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
   var HTMLMyComponentElement: {
@@ -59,10 +96,12 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'my-component-child': HTMLMyComponentChildElement
     'my-component': HTMLMyComponentElement
   }
 
   interface ElementTagNameMap {
+    'my-component-child': HTMLMyComponentChildElement;
     'my-component': HTMLMyComponentElement;
   }
 

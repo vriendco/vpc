@@ -2,11 +2,11 @@ import { Component, Prop } from '@stencil/core';
 import { format } from '../../utils/utils';
 
 @Component({
-  tag: 'my-component',
-  styleUrl: 'my-component.css',
+  tag: 'my-component-child',
+  styleUrl: 'my-component-child.css',
   shadow: true
 })
-export class MyComponent {
+export class MyComponentChild {
   /**
    * The first name
    */
@@ -27,6 +27,6 @@ export class MyComponent {
   }
 
   render() {
-    return <div class="my-component">Hello, World! Eu sou um {this.getText()}</div>;
+    return <div class="my-component-child">Hello, World Filho! Eu sou um {this.getText()}</div>;
   }
 }
