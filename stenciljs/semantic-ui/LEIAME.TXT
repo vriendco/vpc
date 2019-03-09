@@ -16,21 +16,24 @@ Mude para:
 /src/assets/semantic 
 
 4-) Compile o semantic-ui:
-#cd semantic/
+#cd src/assets/semantic/
 #gulp build
 
 5-) Copiar diretório semantic para a pasta www, criar a pasta se não existir ainda -ela é criada após o primeiro build.
 
 6-) Adicione no html o seguinte :
 
-  <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/semantic/dist/semantic.min.css">
 <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
-<script src="semantic/dist/semantic.min.js"></script>
+<script src="assets/semantic/dist/semantic.min.js"></script>
 
 7-) Adicione um componente, por ex:
 <button class="ui button">
   Este é um botão ui
 </button>
+
+8-) Atualizar o semantic-ui para ultima versão, basta fazer :
+npm update
